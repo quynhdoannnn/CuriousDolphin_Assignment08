@@ -1,3 +1,15 @@
+# Name: Group CuriousDolphin (Quynh Doan, Denise Huynh, Andrew Mehlman)
+# email: doanqb@mail.uc.edu, mehlmadm@mail.uc.edu, huynhd2@mail.uc.edu
+# Assignment Number: Assignment 08
+# Due Date: 10/31/2024
+# Course #/Section: IS 4010-001
+# Semester/Year: Fall Semester 2024
+# Brief Description of the assignment: In this sagacious assignment you will collaborate with peers to develop a VS project modeling something in the real world. Pick a thing in the world of your assigned group that has meaning to all group members. 
+# Brief Description of what this module does: This module defines a DigitalClock class that simulates a digital clock with alarm functionality. The class allows users to set and retrieve the current time, set an alarm time, and check if the current time matches the alarm, triggering an alert if they do. It also includes human-readable and official string representations to display the clock’s current time and alarm status.
+# Citations: N/A
+# Anything else that's relevant: N/A
+
+#clock.py
 class DigitalClock:
     """
     A Digital Clock that displays time and allows setting alarms.
@@ -10,27 +22,26 @@ class DigitalClock:
         self._current_time = current_time
         self._alarm_time = None
 
-    def current_time(self):
+    def get_current_time(self):
         """
         Returns the current time on the clock.
         """
         return self._current_time
 
-    def current_time(self, time):
+    def set_current_time(self, time):
         """
         Sets the current time on the clock.
         :param time: str, the time to set on the clock.
         """
-        # Validation could be added here to ensure time format is correct
         self._current_time = time
 
-    def alarm_time(self):
+    def get_alarm_time(self):
         """
         Returns the set alarm time.
         """
         return self._alarm_time
 
-    def alarm_time(self, time):
+    def set_alarm_time(self, time):
         """
         Sets the alarm time.
         :param time: str, the alarm time to set.
@@ -42,8 +53,8 @@ class DigitalClock:
         Sets an alarm for a specified time.
         :param time: str, the time to set the alarm.
         """
-        self.alarm_time = time
-        print(f"Alarm set for {self.alarm_time}")
+        self.set_alarm_time(time)
+        print(f"Alarm set for {self._alarm_time}")
 
     def check_alarm(self):
         """
@@ -58,11 +69,12 @@ class DigitalClock:
         """
         Returns a human-readable representation of the clock and its settings.
         """
-        return f"DigitalClock: Current Time: {self.current_time}, Alarm Time: {self.alarm_time or 'No alarm set'}"
+        return f"DigitalClock: Current Time: {self.get_current_time()}, Alarm Time: {self.get_alarm_time() or 'No alarm set'}"
 
     def __repr__(self):
         """
         Returns an official string representation of the DigitalClock object.
         """
-        return f"DigitalClock(current_time='{self.current_time}')"
+        return f"DigitalClock(current_time='{self.get_current_time()}')"
+
 

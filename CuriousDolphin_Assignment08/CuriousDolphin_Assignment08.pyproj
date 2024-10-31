@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>28c96c65-f41e-438f-bae8-6e8b8f12689c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CuriousDolphin_Assignment08.py</StartupFile>
+    <StartupFile>mainPackage\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,7 +27,10 @@
     <Compile Include="digitalclockPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CuriousDolphin_Assignment08.py" />
+    <Compile Include="mainPackage\main.py" />
+    <Compile Include="mainPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="tempPackage\temp.py">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +39,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="mainPackage\" />
     <Folder Include="tempPackage\" />
   </ItemGroup>
   <ItemGroup>
